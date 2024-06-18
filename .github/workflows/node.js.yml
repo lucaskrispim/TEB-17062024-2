@@ -39,6 +39,6 @@ jobs:
         DOCKER_IMAGE_NAME: lucaskrispim/teb17062024_2:latest
 
       run: |
-        docker build - t $DOCKER_IMAGE_NAME .
+        docker build -t $DOCKER_IMAGE_NAME .
         echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
         docker push $DOCKER_IMAGE_NAME
